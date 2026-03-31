@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+</head>
+<body>
+    <h1>Upcoming appointments</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+        <tr th:each="appt: ${appointments}">
+            <td th:text="${appt.name}">Name Placeholder</td>
+            <td th:text="${appt.appointmentDate}">Date Placeholder</td>
+            <td th:text="${appt.appointmentTime}">Time Placeholder</td>
+        </tr>
+    </table>
+    <a href="/book">Book New Appointment</a>
+</body>
+</html>
